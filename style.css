@@ -34,6 +34,7 @@ nav {
 
 /* Navbar styles */
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,7 +132,7 @@ nav {
 @media only screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     margin: 0;
     padding: 2px;
   }
