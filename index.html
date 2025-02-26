@@ -32,6 +32,7 @@
     <!-- Navigation Bar -->
     <nav>
       <div class="navbar">
+        <!-- Mobile nav -->
         <div class="mobile-nav">
           <a href="#" class="mobile-logo"><i class="fas fa-chart-line"></i> StashSmart</a>
           <div class="mobile-buttons">
@@ -39,25 +40,36 @@
             <a href="./sign-up/sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
           </div>
         </div>
-        <a href="#" class="logo"><i class="fas fa-chart-line"></i> StashSmart</a>
-    
-        <!-- Navigation Links -->
+
+        <!-- Desktop nav  -->
+         <div class="sitelogo" style="display: flex;">
+          <a href="#" class="logo"><i class="fas fa-chart-line"></i> StashSmart</a>
+         </div>
+         <!-- Navigation Links -->
+          <div class="nav" style="margin-left: 20%;">
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="./Finance-Dashboard/dashboard.html">Dashboard</a></li>
-          <li><a href="#tracker">Transaction Tracker</a></li>
-          <li><a href="#how-it-works">How it works</a></li>
-          <li><a href="./support/support.html">Support</a></li>
-          <li><a href="./settings/settings.html">Settings</a></li>
+          <!-- <li><a href="#features">Features</a></li> -->
+          <li><a href="./about/index.html">About</a></li>
+          <!-- <li><a href="./Finance-Dashboard/dashboard.html">Dashboard</a></li> -->
+          <!-- <li><a href="#tracker">Transaction Tracker</a></li> -->
+          <!-- <li><a href="#how-it-works">How it works</a></li> -->
+          <!-- <li><a href="./support/support.html">Support</a></li> -->
+          <!-- <li><a href="./settings/settings.html">Settings</a></li> -->
         </ul>
+      </div>
     
         <!-- Buttons for Log In and Sign Up -->
-        <div class="buttons">
-          <a href="./login/login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <div class="buttons" style="display: flex; margin-left: 10%;">
+          <div style="display: block;">
+            <a href="./login/login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+            <p style="color: white;">To explore more features</p> 
+          </div>
+          <div style="display: block;">
           <a href="./sign-up/sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
+          </div>
         </div>
+
       </div>
     </nav>
     
@@ -91,62 +103,6 @@
         <span></span>
       </a>
     </div>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="head-text">
-        <h1>Key Features</h1>
-        <div class="under-head-text"></div>
-      </div>
-      <div class="feature">
-        <img src="./assets/dashboard.png" alt="Dashboard">
-        <h2>Dashboard</h2>
-        <p>Visualize your financial health at a glance with our intuitive dashboard. Monitor trends, track budgets, and achieve your financial goals with ease.</p>
-  </div>
-      <div class="feature">
-        <img src="./assets/support.png" alt="Support">
-        <h2>24/7 Support</h2>
-        <p>We’re here to help! Get round-the-clock assistance from our dedicated support team to ensure you make the most of StashSmart's powerful features.</p>
-      </div>
-      <div class="feature">
-        <img src="./assets/settings.png" alt="Settings">
-        <h2>Personalized Settings</h2>
-        <p>Customize StashSmart to suit your needs. Adjust your preferences, manage your accounts, and set your financial goals with our comprehensive settings options.</p>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-      <div class="head-text">
-        <h1>About Us</h1>
-        <div class="under-head-text"></div>
-      </div>
-      <div class="about-content">
-        <p>StashSmart was inspired by a personal experience of feeling overwhelmed by financial chaos. Managing income, expenses, and savings felt like an uphill battle, prompting us to create a tool that simplifies and empowers people to take control of their finances.</p>
-        <p>Our journey began with the aim of making financial tracking accessible and user-friendly for everyone. We believe that by offering a platform that combines simplicity with powerful features, we can help individuals achieve financial stability and peace of mind.</p>
-        <div class="team">
-          <div class="team-member">
-            <h3>Peter Opoku-Mensah</h3>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/opokumensahpeter/">Profile</a></p>
-            <p>GitHub: <a href="https://github.com/deezyfg">Profile</a></p>
-            <p>Twitter: <a href="https://twitter.com/coded_issue">Profile</a></p>
-          </div>
-          <div class="team-member">
-            <h3>Frederick Napey</h3>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/frederick-napey-85426a287/">Profile</a></p>
-            <p>GitHub: <a href="https://github.com/blindlit0/">Profile</a></p>
-            <p>Twitter: <a href="https://x.com/FNap92727">Profile</a></p>
-          </div>
-          <div class="team-member">
-            <h3>Owusu Vincent</h3>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/owusuvincent/">Profile</a></p>
-            <p>GitHub: <a href="https://github.com/dem0saic">Profile</a></p>
-            <p>Twitter: <a href="https://x.com/mosaic_de42374">Profile</a></p>
-          </div>
-        </div>
-        <p>GitHub Repository: <a href="https://github.com/deezyfg/StashSmart">https://github.com/deezyfg/StashSmart</a></p>
-      </div>
-    </section>
 
     <!-- Personal Finance Tracker Section -->
     <section class="main-content" id="tracker">
