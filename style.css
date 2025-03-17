@@ -58,23 +58,22 @@ body {
   overflow-x: hidden;
 }
 
+/* Navbar Styling */
 nav {
   position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   background-color: var(--color-surface);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: 10px 20px;
   box-shadow: var(--shadow-md);
   z-index: 1000;
 }
 
 .navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -82,73 +81,103 @@ nav {
 
 .logo {
   font-size: 24px;
-  font-weight: var(--font-weight-bold);
+  font-weight: bold;
   color: var(--color-primary);
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 
-.nav-links {
-  display: flex;
+.nav-links ul {
   list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links a {
-  display: inline-block;
-  margin: 0 var(--spacing-md);
-  /* background-color: var(--color-secondary); */
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-md) var(--spacing-lg);
-  transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
-  font-family: cursive;
-  color: var(--color-text-primary);
   text-decoration: none;
-  font-size: var(--font-size-lg);
-  font-weight: bolder;
-}
-
-.nav-links a:hover {
-  /* background-color: rgb(106, 106, 235); */
-  background-color: var(--color-secondary);
-  /* color: white; */
-  color: var(--color-primary);
-  transform: translateY(-5px);
+  color: var(--color-text-primary);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .buttons {
   display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.button-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.button-wrapper p {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  margin-top: var(--spacing-xs);
+  gap: 10px;
 }
 
 .buttons a {
   background: var(--color-primary);
   color: #fff;
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--border-radius-md);
+  padding: 10px 15px;
+  border-radius: 5px;
   text-decoration: none;
-  transition: var(--transition-normal);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  /* Adds spacing between icon and text */
+  transition: 0.3s;
 }
 
 .buttons a:hover {
   transform: scale(1.1);
+}
+
+/* Hide side menu and mobile menu icon by default */
+.menu-icon {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#menuToggle{
+  display: none;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 0;
+}
+
+.side-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.close-btn {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .buttons {
+    display: none;
+  }
 }
 
 /* Section-box styles */
@@ -863,53 +892,15 @@ footer {
 /* ------- Mobile Responsive Styles-------  */
 @media screen and (max-width: 768px) {
   /* navbar */
-  nav {
-    position: sticky;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .nav-links {
     display: none;
   }
-
-  .nav-links.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
+  .menu-btn {
+    display: block;
   }
 
-  .nav-links li {
-    margin-bottom: 15px;
-  }
-
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-links i {
-    margin-right: 10px;
-  }
-
-  .menu-toggle {
-    display: inline;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 15px;
+  #menuToggle{
+    display: block;
   }
 
   /* Landing Page Styles */

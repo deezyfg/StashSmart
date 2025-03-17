@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css">
   <title>StashSmart - Personal Finance Tracker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,42 +25,40 @@
   <!-- Navigation Bar -->
   <nav>
     <div class="navbar">
-      <!-- Desktop nav  -->
-      <div class="sitelogo" style="display: flex;">
+      <!-- Site Logo -->
+      <div class="sitelogo">
         <a href="#" class="logo"><i class="fas fa-chart-line"></i> StashSmart</a>
       </div>
-      <!-- Mobile nav -->
 
       <!-- Navigation Links -->
-      <div class="nav">
-        <ul class="nav-links">
+      <div class="nav-links" id="navLinks">
+        <ul>
           <li><a href="#">Home</a></li>
-          <!-- <li><a href="#features">Features</a></li> -->
           <li><a href="./about/index.html">About</a></li>
-          <!-- <li><a href="./Finance-Dashboard/dashboard.html">Dashboard</a></li> -->
-          <!-- <li><a href="#tracker">Transaction Tracker</a></li> -->
-          <!-- <li><a href="#how-it-works">How it works</a></li> -->
-          <!-- <li><a href="./support/support.html">Support</a></li> -->
-          <!-- <li><a href="./settings/settings.html">Settings</a></li> -->
         </ul>
       </div>
 
       <!-- Buttons for Log In and Sign Up -->
       <div class="buttons">
-        <div class="button-wrapper">
-          <a href="./login/login.html" class="btn-head">
-            <i class="fas fa-sign-in-alt"></i> Log In
-          </a>
-          <!-- <p>To explore more features</p> -->
-        </div>
-        <div class="button-wrapper">
-          <a href="./sign-up/sign-up.html" class="btn-head">
-            <i class="fas fa-user-plus"></i> Sign Up
-          </a>
-        </div>
+        <a href="./login/login.html" class="btn-head">
+          <i class="fas fa-sign-in-alt"></i> Log In
+        </a>
+        <a href="./sign-up/sign-up.html" class="btn-head">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </a>
       </div>
 
+      <!-- Hamburger Icon -->
+      <i class="fa-solid fa-bars fa-lg menu-icon" id="menuToggle"></i>
 
+      <!-- Side Menu -->
+      <div class="side-menu" id="sideMenu">
+        <i class="fa-solid fa-xmark close-btn" id="closeMenu"></i>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./about/index.html">About</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -69,7 +67,7 @@
     <div class="main-landing">
       <div class="content">
         <!-- Header and Subheading -->
-        <h1 class="under-welcome-h1">Tracking <span class="highlight">Finances</span> Should Be 
+        <h1 class="under-welcome-h1">Tracking <span class="highlight">Finances</span> Should Be
           <span class="highlight">Easy
             <svg class="underline" width="100%" height="20" viewBox="0 0 160 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -314,6 +312,25 @@
 
   <!-- Custom Scripts -->
   <script src="script.js"></script>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      document.getElementById("sideMenu").style.right = "0";
+    });
+
+    document.getElementById("closeMenu").addEventListener("click", function () {
+      document.getElementById("sideMenu").style.right = "-250px";
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+      let menu = document.getElementById("sideMenu");
+      let menuIcon = document.getElementById("menuToggle");
+
+      if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        menu.style.right = "-250px";
+      }
+    });
+  </script>
 </body>
 
 </html>
