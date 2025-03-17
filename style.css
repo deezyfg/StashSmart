@@ -1,170 +1,165 @@
-/* Reset styles and default font */
+:root {
+  /* Colors */
+  --color-primary: #001aff;
+  --color-secondary: #cccccc;
+  --color-accent: #FFC107;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-border: #dee2e6;
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+
+  /* Typography */
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-sm: 14px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0px 6px 12px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: var(--font-family-base);
 }
 
-/* Hide scrollbar on WebKit browsers */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Body styles */
 body {
+  background-color: var(--color-background);
   scroll-behavior: smooth;
-  background-color: #121212;
 }
 
-/* Navigation styles */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(113, 99, 186);
+  background-color: var(--color-surface);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
-  z-index: 100;
-}
-
-/* Navbar styles */
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px;
-  background-color: transparent;
-  margin-right: 40px;
-  margin-left: 40px;
-  margin-top: 0px;
-  overflow-x: hidden;
-  position: sticky;
-  top: 0;
-  bottom: 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: var(--shadow-md);
   z-index: 1000;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .logo {
-  color: #fff;
-  font-size: 28px;
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
   text-decoration: none;
   display: flex;
   align-items: center;
-}
-
-.navbar i {
-  margin-right: 5px;
 }
 
 .nav-links {
   display: flex;
-  margin-left: 50px;
-  margin-right: 100px;
-}
-
-.nav-links li {
-  margin-right: 20px;
   list-style: none;
 }
 
 .nav-links a {
-  color: #fff;
+  display: inline-block;
+  margin: 0 var(--spacing-md);
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+
+  color: var(--color-text-primary);
   text-decoration: none;
-  display: flex;
-  margin: 0 10px;
-  font-size: 18px;
-  align-items: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
 }
 
 .nav-links a:hover {
-  transition: all 0.3s ease 0s;
-  color: #092475;
-  cursor: pointer;
+  background-color: rgb(106, 106, 235);
+  color: white;
+  transform: translateY(-5px);
 }
 
-/* Menu-toggle styles */
-.menu-toggle {
+.buttons {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  cursor: pointer;
+  gap: var(--spacing-md);
 }
 
-.menu-toggle i {
-  font-size: 20px;
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Button styles */
-.btn-head {
-  display: inline-block;
-  margin: 6px;
-  padding: 8px 12px;
+.button-wrapper p {
+  color: var(--color-text-secondary); 
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.buttons a {
+  background: var(--color-primary);
   color: #fff;
-  font-size: 16px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
   text-decoration: none;
-  border: 1px solid #fff;
-  border-radius: 2px;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs); /* Adds spacing between icon and text */
 }
 
-.btn-head:hover {
-  transition: all 0.3s ease 0s;
-  color: #092475;
-  cursor: pointer;
+.buttons a:hover {
+  transform: scale(1.1);
 }
 
-.mobile-nav{
+.mobile-nav {
   display: none;
 }
 
-/* Mobile Responsive Styles */
 @media only screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0;
-    padding: 2px;
-  }
-
-  .nav-links {
+  .nav-links, .buttons {
     display: none;
   }
-
-  .logo {
-    display: none;
-  }
-
-  .buttons {
-    display: none;
-  }
-
   .mobile-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
   }
-
   .mobile-logo {
-    color: #fff;
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
   }
 
   .mobile-buttons {
@@ -216,7 +211,7 @@ nav {
   text-align: center;
 }
 .under-welcome-h1 {
-  font-size: 40.5px;
+  font-size: 70px;
   color: white;
   text-align: start;
   margin-bottom: 20px;
@@ -891,4 +886,5 @@ footer {
     margin-right: 0;
     margin-bottom: 8px;
   }
+}
 }
