@@ -55,6 +55,7 @@ html {
 body {
   background-color: var(--color-background);
   color: black;
+  overflow-x: hidden;
 }
 
 nav {
@@ -150,50 +151,6 @@ nav {
   transform: scale(1.1);
 }
 
-.mobile-nav {
-  display: none;
-}
-
-@media only screen and (max-width: 768px) {
-
-  .nav-links,
-  .buttons {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .mobile-logo {
-    font-size: var(--font-size-lg);
-    color: var(--color-primary);
-    text-decoration: none;
-  }
-
-  .mobile-buttons {
-    display: flex;
-    gap: 2px;
-  }
-
-  .btn-head {
-    display: inline-block;
-    padding: 5px 5px;
-    color: #fff;
-    font-size: 13px;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 2px;
-  }
-
-  .section-box {
-    margin-top: 35px;
-  }
-}
-
-
 /* Section-box styles */
 /* Hero Section */
 .hero {
@@ -219,13 +176,22 @@ nav {
 
 /* Content Styles */
 .content {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 91vh;
+  /* padding: 20px; */
+  flex-direction: column;
+  box-sizing: border-box;
+  /* margin: 0 auto;
   flex: 1;
   text-align: center;
   align-items: center;
   align-self: center;
-  align-content: center;
+  align-content: center; */
 }
 
 .under-welcome-h1 {
@@ -420,11 +386,12 @@ p {
   margin: 0 auto;
   height: 80vh;
   padding: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: black;
   flex-direction: row;
   box-sizing: border-box;
 }
+
 .working-content {
   background-color: #fffebd;
   display: flex;
@@ -532,8 +499,8 @@ p {
 }
 
 .sign-up-button-btn:hover {
-  color: #092475;
-  transform: translate(0, -2px);
+  transform: translateY(-5px);
+  transition: var(--transition-normal);
 }
 
 
@@ -833,7 +800,7 @@ td:last-child {
 /* test-arrow */
 .arrow {
   position: absolute;
-  top: 100%;
+  top: 97%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -863,65 +830,6 @@ td:last-child {
   animation: arrow-bounce 1s infinite;
 }
 
-/* Mobile Responsive Styles */
-@media only screen and (max-width: 768px) {
-  .tracker-part {
-    padding: 5px;
-  }
-
-  .transaction-form {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-  .transaction-form input[type="text"],
-  .transaction-form input[type="number"],
-  .transaction-form select,
-  .transaction-form input[type="date"] {
-    width: calc(100% - 20px);
-    margin-bottom: 10px;
-  }
-
-  .transaction-form button {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .currency-filter {
-    gap: 10px;
-  }
-
-  #currency,
-  #date {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .table-part.scrollable {
-    max-height: calc(100vh - 400px);
-  }
-
-  th,
-  td {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .delete-button,
-  .edit-button,
-  .save-button {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .arrow span {
-    width: 15px;
-    height: 15px;
-    margin: 8px;
-  }
-}
-
-
 /* ------- Footer styles-------  */
 footer {
   width: 100vw;
@@ -931,10 +839,9 @@ footer {
   color: #fff;
   text-align: center;
   bottom: 0;
-  margin-top: auto;
 }
 
-.footer ul {
+/* .footer ul {
   list-style-type: none;
   padding: 0;
 }
@@ -947,14 +854,19 @@ footer {
 .footer a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-.footer p{
+.footer p {
   color: #fff;
 }
 
-/* Media queries for responsiveness */
+/* ------- Mobile Responsive Styles-------  */
 @media screen and (max-width: 768px) {
+  /* navbar */
+  nav {
+    position: sticky;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -1000,38 +912,54 @@ footer {
     margin-top: 15px;
   }
 
-  /* ------- Footer styles-------  */
-  .footer {
-    padding: 10px 20;
-    background-color: rgb(113, 99, 186);
-    color: #fff;
+  /* Landing Page Styles */
+  .under-welcome-h1 {
+    display: inline-flexbox;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 28px;
+    text-align: justify;
     text-align: center;
   }
 
-  .footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .under-welcome-h1 svg{
+    width: 100px;
+  }
+
+  .under-welcome-p{
+    font-size: 18px;
+    margin: 0;
     padding: 0;
-    margin-top: 10px;
   }
 
-  .footer li {
-    margin-right: 15px;
-    margin-bottom: 10px;
-    list-style: none;
+  .bullet{
+    font-size: 12px;
   }
 
-  /* ------- Mobile Responsive Styles-------  */
-  @media only screen and (max-width: 768px) {
-    .footer ul {
-      flex-direction: column;
-      align-items: center;
-    }
+  img{
+    width: 100px;
+  }
 
-    .footer li {
-      margin-right: 0;
-      margin-bottom: 8px;
-    }
+
+  .section-box {
+    margin-top: 35px;
+  }
+
+  .experience{
+    margin: 0 0 20px 0;
+    padding: 5%;
+    max-width: 100%;
+    height: fit-content;
+  }
+
+  .circle-svg {
+   display: none;
+  }
+  
+
+  .right-working-image{
+    display: none;
   }
 }
