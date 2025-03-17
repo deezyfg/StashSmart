@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./favicon_io/android-chrome-512x512.png"
-      sizes="64x64"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <title>StashSmart - Personal Finance Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Margarine&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">  
-  </head>
 
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <div class="navbar">
-        <!-- Mobile nav -->
-        <div class="mobile-nav">
-          <a href="#" class="mobile-logo"><i class="fas fa-chart-line"></i> StashSmart</a>
-          <div class="mobile-buttons">
-            <a href="./login/login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
-            <a href="./sign-up/sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="./favicon_io/android-chrome-512x512.png" sizes="64x64" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>StashSmart - Personal Finance Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Margarine&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="navbar">
+      <!-- Mobile nav -->
+      <div class="mobile-nav">
+        <a href="#" class="mobile-logo"><i class="fas fa-chart-line"></i> StashSmart</a>
+        <div class="mobile-buttons">
+          <a href="./login/login.html" class="btn-head"><i class="fas fa-sign-in-alt"></i> Log In</a>
+          <a href="./sign-up/sign-up.html" class="btn-head"><i class="fas fa-user-plus"></i> Sign Up</a>
         </div>
+      </div>
 
-        <!-- Desktop nav  -->
-         <div class="sitelogo" style="display: flex;">
-          <a href="#" class="logo"><i class="fas fa-chart-line"></i> StashSmart</a>
-         </div>
-         <!-- Navigation Links -->
-          <div class="nav">
+      <!-- Desktop nav  -->
+      <div class="sitelogo" style="display: flex;">
+        <a href="#" class="logo"><i class="fas fa-chart-line"></i> StashSmart</a>
+      </div>
+      <!-- Navigation Links -->
+      <div class="nav">
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <!-- <li><a href="#features">Features</a></li> -->
@@ -59,202 +51,256 @@
           <!-- <li><a href="./settings/settings.html">Settings</a></li> -->
         </ul>
       </div>
-    
-        <!-- Buttons for Log In and Sign Up -->
-<div class="buttons">
-  <div class="button-wrapper">
-    <a href="./login/login.html" class="btn-head">
-      <i class="fas fa-sign-in-alt"></i> Log In
-    </a>
-    <!-- <p>To explore more features</p> -->
-  </div>
-  <div class="button-wrapper">
-    <a href="./sign-up/sign-up.html" class="btn-head">
-      <i class="fas fa-user-plus"></i> Sign Up
-    </a>
-  </div>
-</div>
 
-
+      <!-- Buttons for Log In and Sign Up -->
+      <div class="buttons">
+        <div class="button-wrapper">
+          <a href="./login/login.html" class="btn-head">
+            <i class="fas fa-sign-in-alt"></i> Log In
+          </a>
+          <!-- <p>To explore more features</p> -->
+        </div>
+        <div class="button-wrapper">
+          <a href="./sign-up/sign-up.html" class="btn-head">
+            <i class="fas fa-user-plus"></i> Sign Up
+          </a>
+        </div>
       </div>
-    </nav>
-    
-    <!-- Landing Page Content -->
-    <section class="hero">
-      <div class="main-landing">
-        <div class="content">
-          <!-- Header and Subheading -->
-          <h1 class="under-welcome-h1">Tracking <span class="highlight">Finances
-            <svg class="underline" width="160" height="30" viewBox="0 0 160 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 20 C50 5, 110 35, 155 10" stroke="#FFC107" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></span> 
+
+
+    </div>
+  </nav>
+
+  <!-- Landing Page Content -->
+  <section class="hero">
+    <div class="main-landing">
+      <div class="content">
+        <!-- Header and Subheading -->
+        <h1 class="under-welcome-h1">Tracking <span class="highlight">Finances
+            <!-- <svg class="underline" width="160" height="30" viewBox="0 0 160 30" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 20 C50 5, 110 35, 155 10" stroke="#FFC107" stroke-width="4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>-->
+          </span>
           Should Be <span class="highlight">Easy
-            <svg class="underline" width="100%" height="20" viewBox="0 0 160 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="underline" width="100%" height="20" viewBox="0 0 160 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M5 15 C40 30, 120 30, 155 10" stroke="#FFC107" stroke-width="4" stroke-linecap="round" />
             </svg>
-          </span> - <br>Don't Sweat It! 💦</h1>
-          <div class="under-h1"></div>
-          <p class="under-welcome-p">
-            <span class="bullet">•</span> Say goodbye to spreadsheets and money stress. <br />
-            <span class="bullet">•</span> Effortlessly track your income, expenses, and savings—all in one place. <br />
-            <span class="bullet">•</span> Set goals, stay on budget, and make smarter financial moves without the headache. <br />
-            <span class="bullet">•</span> Your money, your rules! 🚀💰
-          </p>
-          
-          <!-- Call to Action Button -->
-                <a href="./sign-up/sign-up.html" class="under-welcome-btn">Sign Up Now</a>
+          </span> - <br>StashSmart
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="60"  height="60"  viewBox="0 0 24 24"  fill="#FFC107"  class="icon icon-tabler icons-tabler-filled icon-tabler-bulb"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M4.893 4.893a1 1 0 0 1 1.32 -.083l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 0 -1.414z" /><path d="M17.693 4.893a1 1 0 0 1 1.497 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7z" /><path d="M14 18a1 1 0 0 1 1 1a3 3 0 0 1 -6 0a1 1 0 0 1 .883 -.993l.117 -.007h4z" /><path d="M12 6a6 6 0 0 1 3.6 10.8a1 1 0 0 1 -.471 .192l-.129 .008h-6a1 1 0 0 1 -.6 -.2a6 6 0 0 1 3.6 -10.8z" /></svg>
+        </h1>
+        <div class="under-h1"></div>
+        <p class="under-welcome-p">
+          <span class="bullet">•</span> Say goodbye to spreadsheets and money stress. <br />
+          <span class="bullet">•</span> Effortlessly track your income, expenses, and savings—all in one place. <br />
+          <span class="bullet">•</span> Set goals, stay on budget, and make smarter financial moves without the
+          headache. <br />
+          <span class="bullet">•</span> Your money, your rules!
+        </p>
+
+        <!-- Call to Action Button -->
+        <a href="./sign-up/sign-up.html" class="under-welcome-btn">Sign Up Now</a>
         <!-- </div> -->
         <div class="under-welcome-image">
           <!-- Image for Landing Page -->
           <img src="./assets/makeme.png" alt="Tracking Finances" />
         </div>
       </div>
-    </section>
+  </section>
 
-    <!-- Scroll Down Arrow -->
-    <br />
-    <div class="arrow">
-      <a href="#tracker" class="scroll-link">
-        <span></span>
+  <!-- Scroll Down Arrow -->
+  <br />
+  <div class="arrow">
+    <a href="#how-it-works" class="scroll-link">
+      <span></span>
+    </a>
+  </div>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Master Your Money in <span>3 Simple Steps</span> — No Stress, Just Smarts!</h2>
+      
+      <div class="steps">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-icon">
+            <img src="./assets/link.svg" alt="Connect Accounts" />
+          </div>
+          <h3>Step 1: Connect Your Finances</h3>
+          <p>Ditch the spreadsheets—just link your accounts, and boom, you're ready to roll.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-icon">
+            <img src="./assets/insights.svg" alt="Get Insights" />
+          </div>
+          <h3>Step 2: Get Instant Insights</h3>
+          <p>We crunch the numbers so you don’t have to—real-time reports that actually make sense.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="step" style="margin-top: 50px;">
+          <div class="step-icon">
+            <img src="./assets/goal.svg" alt="Crush Goals" />
+          </div>
+          <h3 style="margin-top: 40px;">Step 3: Take Control & Crush Your Goals</h3>
+          <p>Save smarter, spend better, and watch your money grow—effortlessly.</p>
+        </div>
+      </div>
+      
+      <!-- CTA Button -->
+      <a href="#signup" class="cta-btn">Start Tracking Now
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-cash-register"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 15h-2.5c-.398 0 -.779 .158 -1.061 .439c-.281 .281 -.439 .663 -.439 1.061c0 .398 .158 .779 .439 1.061c.281 .281 .663 .439 1.061 .439h1c.398 0 .779 .158 1.061 .439c.281 .281 .439 .663 .439 1.061c0 .398 -.158 .779 -.439 1.061c-.281 .281 -.663 .439 -1.061 .439h-2.5" /><path d="M19 21v1m0 -8v1" /><path d="M13 21h-7c-.53 0 -1.039 -.211 -1.414 -.586c-.375 -.375 -.586 -.884 -.586 -1.414v-10c0 -.53 .211 -1.039 .586 -1.414c.375 -.375 .884 -.586 1.414 -.586h2m12 3.12v-1.12c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2" /><path d="M16 10v-6c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-4c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414v6m8 0h-8m8 0h1m-9 0h-1" /><path d="M8 14v.01" /><path d="M8 17v.01" /><path d="M12 13.99v.01" /><path d="M12 17v.01" /></svg>
       </a>
     </div>
+  </section>
 
-    <!-- Personal Finance Tracker Section -->
-    <section class="main-content" id="tracker">
-      <div class="head-text">
-        <!-- Header for Tracker -->
-        <h1>Access Your Personal Finance Tracker</h1>
-        <div class="under-head-text"></div>
+
+  <section class="experience" id="experience">
+    <div class="head-text">
+      <!-- Header for How it Works -->
+      <!-- <h1>Featsures</h1> -->
+      <div class="under-head-text"></div>
+    </div>
+    <br />
+    <div class="working-content">
+      <div class="left-working">
+        <!-- Subheading and List of Features -->
+        <h5 class="working-head">
+          Experience the power of
+          <strong class="circle">
+            Personal Finance Tracker
+            <svg class="circle-svg" width="250" height="60" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="125" cy="30" rx="120" ry="25" stroke="#001aff" stroke-width="4" fill="none" />
+            </svg>
+          </strong>
+        </h5>
+        
+        
+        <!-- <div class="under-h1"></div> -->
+        <ul class="ul-items">
+          <li class="check-list-items">
+            <i data-feather="check" class="feather icon-check"></i>
+            <span>Track effortlessly</span>
+          </li>
+          <li class="check-list-items">
+            <i data-feather="check" class="feather icon-check"></i>
+            <span>Control transactions</span>
+          </li>
+          <li class="check-list-items">
+            <i data-feather="check" class="feather icon-check"></i>
+            <span>Customize currencies</span>
+          </li>
+          <li class="check-list-items">
+            <i class="icon-check" data-feather="check"></i>
+            <span>Edit with ease</span>
+          </li>
+          <li class="check-list-items">
+            <i data-feather="check" class="feather icon-check"></i>
+            <span>Real-time balance</span>
+          </li>
+          <li class="check-list-items">
+            <i data-feather="check" class="feather icon-check"></i>
+            <span>Secure data protection</span>
+          </li>
+        </ul>
+        <!-- Call to Action Button -->
+        <a href="./sign-up/sign-up.html" class="sign-up-button-btn">Sign Up Now</a>
       </div>
-      <br />
+      <div class="right-working-image">
+        <!-- Image for How it Works -->
+        <img src="./assets/how-it-works.png" target="_self" alt="Tracking Finances" />
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
 
-      <!-- Tracker Content -->
-      <div class="tracker-part">
-        <!-- Current Balance Display -->
-        <div class="tracker-balance">
-          Current Balance: <span id="balance" class="current-balance"></span>
-        </div>
+  <!-- Personal Finance Tracker Section -->
+  <!-- <section class="main-content" id="tracker">
+    <div class="head-text"> -->
+      <!-- Header for Tracker -->
+      <!-- <h1>Access Your Personal Finance Tracker</h1>
+      <div class="under-head-text"></div>
+    </div>
+    <br /> -->
 
-        <!-- Currency Filter and Date Selection -->
-        <div class="currency-filter">
-          <div class="filter-left">
-            <label for="currency">Select Currency:</label>
-            <select id="currency" onchange="updateBalance()">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GHS" selected>GHS</option>
-              <option value="INR" selected>INR</option>
-            </select>
-          </div>
-          <div class="filter-right">
-            <label for="date" class="date-box">Choose Date:</label>
-            <input type="date" id="date" placeholder="Date" />
-          </div>
-        </div>
+    <!-- Tracker Content -->
+    <!-- <div class="tracker-part"> -->
+      <!-- Current Balance Display -->
+      <!-- <div class="tracker-balance">
+        Current Balance: <span id="balance" class="current-balance"></span>
+      </div> -->
 
-        <!-- Transaction Form -->
-        <div class="transaction-form">
-          <input type="text" id="description" placeholder="Description" />
-          <input type="number" id="amount" placeholder="Amount" />
-          <select id="type">
-            <option value="income">Income</option>
-            <option value="expense">Expense</option>
+      <!-- Currency Filter and Date Selection -->
+      <!-- <div class="currency-filter">
+        <div class="filter-left">
+          <label for="currency">Select Currency:</label>
+          <select id="currency" onchange="updateBalance()">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GHS" selected>GHS</option>
+            <option value="INR" selected>INR</option>
           </select>
-          <!-- Buttons for Adding Transaction and Exporting -->
-          <button onclick="addTransaction()">Add Transaction</button>
-          <button onclick="handleDownload()">Export</button>
         </div>
+        <div class="filter-right">
+          <label for="date" class="date-box">Choose Date:</label>
+          <input type="date" id="date" placeholder="Date" />
+        </div>
+      </div> -->
 
-        <!-- Table for Displaying Transactions -->
-        <div class="table-part" id="table-part">
-          <table id="transaction-table">
-            <tr>
-              <th>Date</th>
-              <th>Description</th>
-              <th>Amount</th>
-              <th>Type</th>
-              <th>Action</th>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
+      <!-- Transaction Form -->
+      <!-- <div class="transaction-form">
+        <input type="text" id="description" placeholder="Description" />
+        <input type="number" id="amount" placeholder="Amount" />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select> -->
+        <!-- Buttons for Adding Transaction and Exporting -->
+        <!-- <button onclick="addTransaction()">Add Transaction</button>
+        <button onclick="handleDownload()">Export</button>
+      </div> -->
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-      <div class="head-text">
-        <!-- Header for How it Works -->
-        <h1>How it works</h1>
-        <div class="under-head-text"></div>
+      <!-- Table for Displaying Transactions -->
+      <!-- <div class="table-part" id="table-part">
+        <table id="transaction-table">
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </table>
       </div>
-      <br />
-      <div class="working-content">
-        <div class="left-working">
-          <!-- Subheading and List of Features -->
-          <h5 class="working-head">
-            Experience the power of
-            <span class="text-lightBlue">Personal Finance Tracker</span>
-          </h5>
-          <!-- <div class="under-h1"></div> -->
-          <ul class="ul-items">
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Track effortlessly</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Control transactions</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Customize currencies</span>
-            </li>
-            <li class="check-list-items">
-              <i class="icon-check" data-feather="check"></i>
-              <span>Edit with ease</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Real-time balance</span>
-            </li>
-            <li class="check-list-items">
-              <i data-feather="check" class="feather icon-check"></i>
-              <span>Secure data protection</span>
-            </li>
-          </ul>
-          <!-- Call to Action Button -->
-                <a href="./sign-up/sign-up.html" class="sign-up-button-btn">Sign Up Now</a>
-        </div>
-        <div class="right-working-image">
-          <!-- Image for How it Works -->
-          <img
-            src="./assets/how-it-works.png"
-            target="_self"
-            alt="Tracking Finances"
-          />
-          <!-- </div> -->
-        </div>
-      </div>
-    </section>
+    </div>
+  </section> -->
 
-    <!-- Footer Section -->
-    <footer>
-      <div class="footer">
-        <!-- <ul>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer">
+      <!-- <ul>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul> -->
-        <p>Copyright &copy; 2024 StashSmart. All rights reserved.</p>
-      </div>
-    </footer>
+      <p>Copyright &copy; 2024 StashSmart. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Icon Replacement Script -->
-    <script>
-      feather.replace();
-    </script>
+  <!-- Icon Replacement Script -->
+  <script>
+    feather.replace();
+  </script>
 
-    <!-- Custom Scripts -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+
 </html>
