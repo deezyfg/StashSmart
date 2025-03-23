@@ -124,7 +124,7 @@ nav {
   cursor: pointer;
 }
 
-#menuToggle{
+#menuToggle {
   display: none;
 }
 
@@ -891,15 +891,17 @@ footer {
 
 /* ------- Mobile Responsive Styles-------  */
 @media screen and (max-width: 768px) {
+
   /* navbar */
   .nav-links {
     display: none;
   }
+
   .menu-btn {
     display: block;
   }
 
-  #menuToggle{
+  #menuToggle {
     display: block;
   }
 
@@ -915,21 +917,21 @@ footer {
     text-align: center;
   }
 
-  .under-welcome-h1 svg{
+  .under-welcome-h1 svg {
     width: 100px;
   }
 
-  .under-welcome-p{
+  .under-welcome-p {
     font-size: 18px;
     margin: 0;
     padding: 0;
   }
 
-  .bullet{
+  .bullet {
     font-size: 12px;
   }
 
-  img{
+  img {
     width: 100px;
   }
 
@@ -938,7 +940,7 @@ footer {
     margin-top: 35px;
   }
 
-  .experience{
+  .experience {
     margin: 0 0 20px 0;
     padding: 5%;
     max-width: 100%;
@@ -946,11 +948,11 @@ footer {
   }
 
   .circle-svg {
-   display: none;
+    display: none;
   }
-  
 
-  .right-working-image{
+
+  .right-working-image {
     display: none;
   }
 }

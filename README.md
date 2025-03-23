@@ -32,7 +32,8 @@
 ## 📸 Screenshots
 
 ![Personal-Finance-Tracker](./assets/sc-finished-product.png)
-![Personal-Finance-Tracker](./assets/sc1-finished-product.png)
+
+<!-- ![Personal-Finance-Tracker](./assets/sc1-finished-product.png) -->
 
 ## 📋 Table of Contents
 
@@ -57,15 +58,15 @@ StashSmart is a web-based application designed to empower users with control ove
 
 ## 🔋 Features
 
-* **Login Page:** Allows users to access their accounts.
-* **Signup Page:** Enables new users to create accounts.
-* **Home Page:** Displays a personalized overview of financial information.
-* **Dashboard Page:** The central hub for viewing all financial information at a glance.
-* **Transaction Tracker Page:** Allows users to enter income and expense transactions efficiently.
-* **Features Page:** Provides a clear and concise explanation of the app's features and functionalities.
-* **Customizable Currency Settings:** Users set their preferred display currency (e.g., USD, EUR, GHS).
-* **Support Page:** Offers resources and assistance to users for any queries or issues they may encounter.
-* **Settings Page:** Enables users to manage preferences such as notifications, account linking, and other custom settings.
+- **Login Page:** Allows users to access their accounts.
+- **Signup Page:** Enables new users to create accounts.
+- **Home Page:** Displays a personalized overview of financial information.
+- **Dashboard Page:** The central hub for viewing all financial information at a glance.
+- **Transaction Tracker Page:** Allows users to enter income and expense transactions efficiently.
+- **Features Page:** Provides a clear and concise explanation of the app's features and functionalities.
+- **Customizable Currency Settings:** Users set their preferred display currency (e.g., USD, EUR, GHS).
+- **Support Page:** Offers resources and assistance to users for any queries or issues they may encounter.
+- **Settings Page:** Enables users to manage preferences such as notifications, account linking, and other custom settings.
 
 ## 🦜️ Story of Inspiration
 
@@ -81,24 +82,27 @@ The story of StashSmart is one of resilience, collaboration, and unwavering dedi
 
 ## ⚙️ Tech Stack
 
-* **Frontend:**
+- **Frontend:**
+
   - **HTML5:** For structuring the web content
   - **CSS3:** For styling and responsive design
   - **JavaScript:** For interactive functionality and dynamic content
 
-* **Development Tools:**
+- **Development Tools:**
+
   - **Git:** For version control
   - **Terminal (Command Line Interface):** As the primary development interface
   - **VS Code:** As an occasional code editor for specific tasks
 
-* **Deployment:**
+- **Deployment:**
   - **GitHub Pages:** For hosting the live website
 
-## 🤸 Quick Start
+<!-- ## 🤸 Quick Start
 
 To help you get started with StashSmart, follow these steps to set up the project locally on your machine.
 
 ### Prerequisites:
+
 Ensure you have the following tools installed on your machine:
 
 - **Git:** For version control and cloning the repository
@@ -109,16 +113,17 @@ Ensure you have the following tools installed on your machine:
 To install and run StashSmart locally, follow these steps:
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/StashSmart.git
-    ```
+   ```bash
+   git clone https://github.com/yourusername/StashSmart.git
+   ```
 2. Navigate to the project directory:
-    ```bash
-    cd StashSmart/frontend
-    ```
+   ```bash
+   cd StashSmart/frontend
+   ```
 3. Open `index.html` in your preferred web browser.
 
 That's it! You should now have StashSmart running locally on your machine.
+ -->
 
 ## 🤳️ Usage
 
@@ -150,4 +155,3 @@ For any inquiries or questions, please contact [email protected]
 ## 📃️ Licensing
 
 This project is licensed under the MIT License. For more details, please see the [LICENSE](LICENSE) file in the repository.
-
