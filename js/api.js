@@ -161,6 +161,40 @@ class StashSmartAPI {
     });
   }
 
+  // Workflow methods
+  async getWorkflow(endpoint, params = {}) {
+    const queryString = new URLSearchParams(params).toString();
+    const url = `/workflows/${endpoint}${queryString ? "?" + queryString : ""}`;
+    return this.request(url);
+  }
+
+  async triggerWorkflow(endpoint, data) {
+    return this.request(`/workflows/${endpoint}`, {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  }
+
+  async getDashboardData() {
+    return this.getWorkflow("dashboard");
+  }
+
+  async getBudgetAlerts() {
+    return this.getWorkflow("alerts");
+  }
+
+  async getInsights(period = "30") {
+    return this.getWorkflow("insights", { period });
+  }
+
+  async createTransactionWorkflow(transactionData) {
+    return this.triggerWorkflow("transaction", transactionData);
+  }
+
+  async registerUserWorkflow(userData) {
+    return this.triggerWorkflow("register", userData);
+  }
+
   // Budget methods
   async getBudgets() {
     return this.request("/budgets");

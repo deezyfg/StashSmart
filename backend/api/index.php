@@ -16,6 +16,8 @@ if (strpos($route, '/auth') === 0) {
     require_once '../controllers/AuthController.php';
 } elseif (strpos($route, '/transactions') === 0) {
     require_once 'transactions.php';
+} elseif (strpos($route, '/workflows') === 0) {
+    require_once 'workflows.php';
 } elseif (strpos($route, '/categories') === 0) {
     require_once 'categories.php';
 } elseif (strpos($route, '/accounts') === 0) {
@@ -26,6 +28,8 @@ if (strpos($route, '/auth') === 0) {
     require_once 'budgets.php';
 } elseif (strpos($route, '/dashboard') === 0) {
     require_once 'dashboard.php';
+} elseif (strpos($route, '/health') === 0) {
+    require_once 'health.php';
 } else {
     ResponseHelper::notFound("API endpoint not found");
 }
