@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,11 +139,13 @@
             justify-content: space-between;
         }
 
-        .endpoint-list, .directory-list {
+        .endpoint-list,
+        .directory-list {
             margin-top: 15px;
         }
 
-        .endpoint-item, .directory-item {
+        .endpoint-item,
+        .directory-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -153,7 +156,8 @@
             border-left: 4px solid #28a745;
         }
 
-        .endpoint-item.error, .directory-item.error {
+        .endpoint-item.error,
+        .directory-item.error {
             border-left-color: #dc3545;
             background: #fff5f5;
         }
@@ -304,14 +308,16 @@
         }
 
         @media (max-width: 768px) {
-            .health-grid, .stats-grid {
+
+            .health-grid,
+            .stats-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .dashboard-header h1 {
                 font-size: 2rem;
             }
-            
+
             .btn {
                 display: block;
                 margin: 10px 0;
@@ -319,6 +325,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="admin-dashboard">
         <div class="navigation">
@@ -349,7 +356,7 @@
     <script src="../js/health-monitor.js"></script>
     <script>
         // Initialize the health monitor
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Load system stats as well
             setTimeout(() => {
                 if (window.healthMonitor) {
@@ -359,4 +366,5 @@
         });
     </script>
 </body>
+
 </html>
