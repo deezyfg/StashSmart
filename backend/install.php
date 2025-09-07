@@ -1,5 +1,10 @@
 <?php
-require_once '../config/database.php';
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require_once 'config/database.php';
 
 echo "<h1>StashSmart Database Setup</h1>";
 
@@ -9,7 +14,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Read and execute the schema file
-    $schemaPath = '../sql/schema.sql';
+    $schemaPath = 'sql/schema.sql';
 
     if (!file_exists($schemaPath)) {
         throw new Exception("Schema file not found at: " . $schemaPath);
