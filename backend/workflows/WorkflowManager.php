@@ -47,7 +47,6 @@ class WorkflowManager
 
             $this->db->commit();
             return ['success' => true, 'user_id' => $userId];
-
         } catch (Exception $e) {
             $this->db->rollback();
             return ['success' => false, 'error' => $e->getMessage()];
@@ -92,7 +91,6 @@ class WorkflowManager
 
             $this->db->commit();
             return ['success' => true, 'transaction_id' => $transactionId];
-
         } catch (Exception $e) {
             $this->db->rollback();
             return ['success' => false, 'error' => $e->getMessage()];
@@ -210,7 +208,7 @@ class WorkflowManager
         ");
         $stmt->execute([$userId, $currentMonth]);
         $monthlyData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+
         $data['monthly_summary'] = [
             'income' => 0,
             'expense' => 0,
@@ -427,7 +425,7 @@ class WorkflowManager
         if (isset($insights['income_expense'])) {
             $income = 0;
             $expenses = 0;
-            
+
             foreach ($insights['income_expense'] as $item) {
                 if ($item['type'] === 'income') $income = $item['total'];
                 if ($item['type'] === 'expense') $expenses = $item['total'];
@@ -464,4 +462,3 @@ class WorkflowManager
         ]);
     }
 }
-?>

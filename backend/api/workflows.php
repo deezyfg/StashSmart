@@ -18,14 +18,14 @@ class WorkflowController
     public function handleRequest()
     {
         setCorsHeaders();
-        
+
         $method = $_SERVER['REQUEST_METHOD'];
         $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         $pathParts = explode('/', trim($path, '/'));
-        
+
         // Extract action from URL
         $action = end($pathParts);
-        
+
         switch ($method) {
             case 'POST':
                 $this->handlePost($action);
@@ -41,7 +41,7 @@ class WorkflowController
     private function handlePost($action)
     {
         $data = json_decode(file_get_contents('php://input'), true);
-        
+
         if (!$data) {
             ResponseHelper::error("Invalid JSON data");
         }
@@ -60,7 +60,7 @@ class WorkflowController
                 // Get user ID from authentication
                 $userId = AuthMiddleware::getCurrentUser();
                 $data['user_id'] = $userId;
-                
+
                 $result = $this->workflowManager->transactionWorkflow($data);
                 if ($result['success']) {
                     ResponseHelper::success($result, "Transaction created successfully");
@@ -77,7 +77,7 @@ class WorkflowController
     private function handleGet($action)
     {
         $userId = null;
-        
+
         // For most GET requests, we need authentication
         if ($action !== 'test') {
             $userId = AuthMiddleware::getCurrentUser();
@@ -113,4 +113,3 @@ class WorkflowController
 // Handle the request
 $controller = new WorkflowController();
 $controller->handleRequest();
-?>

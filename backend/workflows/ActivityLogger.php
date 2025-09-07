@@ -24,7 +24,6 @@ class ActivityLogger
             $ipAddress = $ipAddress ?: $this->getClientIpAddress();
 
             return $stmt->execute([$userId, $action, $detailsJson, $ipAddress]);
-
         } catch (Exception $e) {
             error_log("Activity logging failed: " . $e->getMessage());
             return false;
@@ -156,7 +155,6 @@ class ActivityLogger
             }
 
             return $activities;
-
         } catch (Exception $e) {
             error_log("Failed to get user activity history: " . $e->getMessage());
             return [];
@@ -179,7 +177,6 @@ class ActivityLogger
 
             $stmt->execute([$days]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
         } catch (Exception $e) {
             error_log("Failed to get system activity summary: " . $e->getMessage());
             return [];
@@ -189,7 +186,7 @@ class ActivityLogger
     public function getActiveUsers($timeframe = '24h')
     {
         try {
-            $interval = match($timeframe) {
+            $interval = match ($timeframe) {
                 '1h' => 'INTERVAL 1 HOUR',
                 '24h' => 'INTERVAL 24 HOUR',
                 '7d' => 'INTERVAL 7 DAY',
@@ -207,7 +204,6 @@ class ActivityLogger
 
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC);
-
         } catch (Exception $e) {
             error_log("Failed to get active users: " . $e->getMessage());
             return ['active_users' => 0, 'total_activities' => 0];
@@ -224,7 +220,6 @@ class ActivityLogger
 
             $stmt->execute([$daysToKeep]);
             return $stmt->rowCount();
-
         } catch (Exception $e) {
             error_log("Failed to cleanup old logs: " . $e->getMessage());
             return 0;
@@ -234,14 +229,14 @@ class ActivityLogger
     private function getClientIpAddress()
     {
         $ipKeys = ['HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR'];
-        
+
         foreach ($ipKeys as $key) {
             if (!empty($_SERVER[$key])) {
                 $ips = explode(',', $_SERVER[$key]);
                 return trim($ips[0]);
             }
         }
-        
+
         return 'unknown';
     }
 
@@ -352,4 +347,3 @@ class ActivityTrackingWorkflow
         return $this->logger->getUserActivityHistory($userId, 1000);
     }
 }
-?>

@@ -79,7 +79,6 @@ class SystemHealthWorkflow
                 'database_size_mb' => $sizeInfo['size_mb'] ?? 0,
                 'message' => empty($missingTables) ? 'All tables present' : 'Missing tables: ' . implode(', ', $missingTables)
             ];
-
         } catch (Exception $e) {
             return [
                 'status' => 'error',
@@ -103,7 +102,9 @@ class SystemHealthWorkflow
             $results[$endpoint] = $this->testEndpoint($endpoint);
         }
 
-        $healthyCount = count(array_filter($results, function($r) { return $r['status'] === 'ok'; }));
+        $healthyCount = count(array_filter($results, function ($r) {
+            return $r['status'] === 'ok';
+        }));
         $totalCount = count($results);
 
         return [
@@ -188,7 +189,6 @@ class SystemHealthWorkflow
                 'memory_peak_mb' => round($memoryPeak / 1024 / 1024, 2),
                 'php_version' => PHP_VERSION
             ];
-
         } catch (Exception $e) {
             return [
                 'status' => 'error',
@@ -236,7 +236,6 @@ class SystemHealthWorkflow
                 'total_users' => $totalUsers,
                 'user_engagement_rate' => $totalUsers > 0 ? round(($activeUsers7d / $totalUsers) * 100, 2) : 0
             ];
-
         } catch (Exception $e) {
             return [
                 'status' => 'error',
@@ -248,7 +247,7 @@ class SystemHealthWorkflow
     private function getSystemResources()
     {
         $loadAvg = function_exists('sys_getloadavg') ? sys_getloadavg() : [0, 0, 0];
-        
+
         return [
             'status' => 'healthy',
             'server_time' => date('Y-m-d H:i:s'),
@@ -324,7 +323,6 @@ class SystemHealthWorkflow
             $stats['goals'] = $stmt->fetch(PDO::FETCH_ASSOC);
 
             return $stats;
-
         } catch (Exception $e) {
             return ['error' => 'Failed to get system stats: ' . $e->getMessage()];
         }
@@ -334,7 +332,7 @@ class SystemHealthWorkflow
 // API endpoint for health check
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     setCorsHeaders();
-    
+
     $health = new SystemHealthWorkflow();
     $action = $_GET['action'] ?? 'health';
 
@@ -352,4 +350,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     header('Content-Type: application/json');
     echo json_encode($result, JSON_PRETTY_PRINT);
 }
-?>
